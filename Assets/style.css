@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: white;
+  background-color: #f9fbfd;
 }
 
 .wrapper {
@@ -31,10 +31,10 @@ header {
 }
 
 .card {
-  background-color: whitesmoke;
+  background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
   border-width: 1px;
-  box-shadow: black;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
   font-size: 18px;
   margin: 0 auto;
@@ -46,7 +46,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: white;
+  background: #e7e9eb;
   height: 2px;
 }
 
@@ -62,7 +62,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: white;
+  background: #e7e9eb;
   height: 2px;
 }
 
@@ -74,10 +74,11 @@ header {
 
 .btn {
   border: none;
-  background-color: blue;
+  background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
-  box-shadow: black;
-  color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
@@ -89,7 +90,7 @@ header {
 
 button[disabled] {
   cursor: default;
-  background: rgb(19, 15, 15);
+  background: #c0c7cf;
 }
 
 .float-right {
@@ -97,6 +98,10 @@ button[disabled] {
 }
 
 #password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
   display: block;
   width: 100%;
   padding-top: 15px;
