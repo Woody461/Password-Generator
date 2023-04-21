@@ -11,6 +11,7 @@ var passwordLength;
 var uppercaseCheck;
 var numberCheck;
 var specialCheck;
+
 //Length of Password
 function determineLength(){
   passwordLength = prompt("chose how many characters long would you like your password to be (between 8-128 characters): ");
@@ -25,9 +26,33 @@ function determineLength(){
     alert("password length must be a number between 8-128 characters");
     determineLength();
   }else{
-    alert("The next three screens will ask you what types of characters you would like to be included in your password. If you choose 'No' for all, your password will only contain lowercase letters. ")
+    alert("The next three screens will ask you what types of characters you would like to be included in your password. \nIf you choose 'No' for all, your password will only contain lowercase letters. ")
   }
   return passwordLength;
+}
+
+//Uppercase characters in password
+function determineUppercase(){
+  uppercaseCheck = prompt("do you want to include uppercase latters in your password \n(Yes or No)");
+  uppercaseCheck = uppercaseCheck.toLowerCase();
+
+  if (uppercaseCheck === null || uppercaseCheck === ""){
+    alert("Answer Yes or No");
+    determineUppercase();
+
+  }else if (uppercaseCheck === "yes" || uppercaseCheck === "y"){
+    uppercaseCheck = true;
+    return uppercaseCheck;
+
+  }else if (uppercaseCheck === "no" || uppercaseCheck === "n"){
+    uppercaseCheck = false;
+    return uppercaseCheck;
+
+}else {
+  alert("answer yes or no");
+  determineUppercase;
+}
+return uppercaseCheck;
 }
 
 // Write password to the #password input
