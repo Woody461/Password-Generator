@@ -78,7 +78,28 @@ function determineNumbers(){
 return numberCheck;
 }
 
+//Special characters in password
+function determineSpecial(){
+  specialCheck = prompt("Do you want to include special characters in your password? \n(Yes or No)");
+  specialCheck = specialCheck.toLowerCase();
 
+  if (specialCheck === null || specialCheck === ""){
+    alert ("answer Yes or No");
+    determineSpecial();
+  }else if (specialCheck === "yes" || specialCheck === "y"){
+    specialCheck = true;
+    return specialCheck;
+
+}else if (specialCheck === "no" || specialCheck === "n"){
+  specialCheck = false;
+  return specialCheck;
+
+}else {
+  alert("answer Yes or No");
+  determineNumbers();
+}
+return specialCheck;
+}
 
 // Write password to the #password input
 function writePassword() {
