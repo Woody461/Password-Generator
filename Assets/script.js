@@ -55,6 +55,31 @@ function determineUppercase(){
 return uppercaseCheck;
 }
 
+//Numbers in password 
+function determineNumbers(){
+  numberCheck = prompt("do you want to include numbers in your password \n(Yes or No)");
+  numberCheck =numberCheck.toLowerCase();
+
+  if (numberCheck === null || numberCheck === ""){
+    alert ("answer Yes or No");
+    determineNumbers();
+  }else if (numberCheck === "yes" || numberCheck === "y"){
+    numberCheck = true;
+    return numberCheck;
+
+}else if (numberCheck === "no" || numberCheck === "n"){
+    numberCheck = false;
+    return numberCheck;
+
+}else {
+  alert("answer Yes or No");
+  determineNumbers();
+}
+return numberCheck;
+}
+
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
