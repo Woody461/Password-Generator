@@ -1,7 +1,5 @@
 // Assignment code here
 
-
-// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -22,11 +20,11 @@ function determineLength(){
   }else if (passwordLength>128){
     alert("password length must be less than or equal to 128 characters");
     determineLength();
-  }else if (NaN(passwordLength)){
+  }else if (isNaN(passwordLength)){
     alert("password length must be a number between 8-128 characters");
     determineLength();
   }else{
-    alert("The next three screens will ask you what types of characters you would like to be included in your password. \nIf you choose 'No' for all, your password will only contain lowercase letters. ")
+    alert("The next three screens will ask you what types of characters you would like to be included in your password. \nIf you choose 'No' for all, your password will only contain lowercase letters. ");
   }
   return passwordLength;
 }
